@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/stationFragment"
+        android:title="İstasyon"
+        android:icon="@drawable/ic_station"/>
+
+    <item
+        android:id="@+id/favoritesFragment"
+        android:title="Favoriler"
+        android:icon="@drawable/ic_favorite_empty"/>
+</menu>

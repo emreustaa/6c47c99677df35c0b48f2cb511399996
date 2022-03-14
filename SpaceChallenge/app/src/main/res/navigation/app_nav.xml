@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/stationFragment">
+
+    <fragment
+        android:id="@+id/stationFragment"
+        android:name="com.emreusta.spacechallenge.presentation.ui.StationFragment"
+        android:label="Station"
+        tools:layout="@layout/fragment_station" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.emreusta.spacechallenge.presentation.ui.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
+</navigation>

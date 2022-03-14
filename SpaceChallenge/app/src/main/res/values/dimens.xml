@@ -2,10 +2,12 @@
 <resources>
     <dimen name="margin_normal">16dp</dimen>
     <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_twenty">20sp</dimen>
     <dimen name="margin_small">4dp</dimen>
     <dimen name="margin_medium">8dp</dimen>
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_xlarge">64dp</dimen>
     <dimen name="margin_twenty">20dp</dimen>
     <dimen name="no_space">0dp</dimen>
+    <dimen name="padding_point">36dp</dimen>
 </resources>
