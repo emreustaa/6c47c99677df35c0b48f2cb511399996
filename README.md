@@ -1,7 +1,7 @@
 # Space Challenge App
 
 Space Challenge App is Android Application for Training. Implemented in Kotlin. MVVM and Clean architecture used.
-<img align="left" width="100" height="100" src="https://github.com/emreustaa/6c47c99677df35c0b48f2cb511399996/blob/main/SpaceChallenge/app/src/main/res/mipmap-mdpi/ic_launcher.png">
+<img align="left" width="100" height="100" src="https://github.com/emreustaa/6c47c99677df35c0b48f2cb511399996/blob/main/SpaceChallenge/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
 
 ## General
 
