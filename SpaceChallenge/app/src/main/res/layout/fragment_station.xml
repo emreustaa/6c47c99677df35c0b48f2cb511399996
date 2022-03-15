@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_end"
             android:text="UGS : 5000"
             android:textColor="@color/black_alpha_30"
             android:textSize="@dimen/text_size_medium"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_end"
             android:text="EUS : 500"
             android:textColor="@color/black_alpha_30"
             android:textSize="@dimen/text_size_medium"
@@ -172,11 +172,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_xlarge"
-        android:text="Tgvslxp"
+        android:text="Dünya"
         android:textColor="@color/black"
         android:textSize="@dimen/margin_large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rv_station_list" />
+
+    <FrameLayout
+        android:id="@+id/frame_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/loading_black"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/blue"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

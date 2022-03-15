@@ -5,13 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.emreusta.spacechallenge.data.model.response.SpaceResponseModel
+import com.emreusta.spacechallenge.data.model.room.FavoriteStationModel
 import com.emreusta.spacechallenge.data.repository.SpaceRepository
 import com.emreusta.spacechallenge.data.repository.SpaceRepositoryInterface
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.scopes.ViewModelScoped
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.forEach
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -32,5 +33,37 @@ class StationsViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+    private val _favoriteStationsLiveData: MutableLiveData<List<FavoriteStationModel>> =
+        MutableLiveData()
+    val favoriteStationLiveData: LiveData<List<FavoriteStationModel>> = _favoriteStationsLiveData
+
+    fun getAllFavoriteStations() {
+        viewModelScope.launch {
+            spaceRepository.getFavoriteStations().collect { response ->
+                _favoriteStationsLiveData.value = response
+            }
+        }
+    }
+
+    fun addFavoriteStation(model: FavoriteStationModel) {
+        viewModelScope.launch {
+            spaceRepository.addFavoriteStation(model)
+        }
+    }
+
+    fun deleteFavoriteStation(model: FavoriteStationModel) {
+        viewModelScope.launch {
+            spaceRepository.deleteFavoriteStation(model)
+        }
+    }
+
+    fun isFavoriteStation(name: String): Boolean {
+        var isFavorite = false
+        spaceRepository.isFavoriteStation(name)?.let {
+            isFavorite = true
+        }
+        return isFavorite
     }
 }
